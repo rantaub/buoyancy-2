@@ -133,10 +133,12 @@ export default function HomePage() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
+                  data-testid="upload-zone"
                   className={`fossil-card rounded-2xl p-12 cursor-pointer transition-all duration-300 ${
                     isDragging ? 'border-amber-500/60 bg-amber-900/10 amber-glow' : 'hover:border-amber-700/40'
                   }`}
                   onDragOver={(e) => { e.preventDefault(); setIsDragging(true) }}
+                  onDragEnter={(e) => { e.preventDefault(); setIsDragging(true) }}
                   onDragLeave={() => setIsDragging(false)}
                   onDrop={handleDrop}
                   onClick={() => fileInputRef.current?.click()}

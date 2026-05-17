@@ -64,7 +64,7 @@ export default function ShareModal({ fossil, onClose }: Props) {
         >
           <div className="flex items-center justify-between mb-5">
             <h3 className="text-stone-100 font-semibold text-lg">Share Discovery</h3>
-            <button onClick={onClose} className="p-1.5 rounded-lg hover:bg-stone-800 text-stone-500 transition-colors">
+            <button aria-label="Close" onClick={onClose} className="p-1.5 rounded-lg hover:bg-stone-800 text-stone-500 transition-colors">
               <X className="w-5 h-5" />
             </button>
           </div>

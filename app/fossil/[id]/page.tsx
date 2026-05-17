@@ -82,14 +82,14 @@ export default function FossilDetailPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-transparent" />
 
         <div className="absolute top-4 left-4 right-4 flex justify-between">
-          <button onClick={() => router.back()} className="p-2 glass-card rounded-xl text-stone-300 hover:text-white transition-colors">
+          <button aria-label="Go back" onClick={() => router.back()} className="p-2 glass-card rounded-xl text-stone-300 hover:text-white transition-colors">
             <ArrowLeft className="w-5 h-5" />
           </button>
           <div className="flex gap-2">
-            <button onClick={() => setShowShare(true)} className="p-2 glass-card rounded-xl text-stone-300 hover:text-white transition-colors">
+            <button aria-label="Share fossil" onClick={() => setShowShare(true)} className="p-2 glass-card rounded-xl text-stone-300 hover:text-white transition-colors">
               <Share2 className="w-5 h-5" />
             </button>
-            <button onClick={handleSave} className="p-2 glass-card rounded-xl transition-colors">
+            <button aria-label="Save fossil" onClick={handleSave} className="p-2 glass-card rounded-xl transition-colors">
               {isSaved
                 ? <BookmarkCheck className="w-5 h-5 text-amber-400" />
                 : <Bookmark className="w-5 h-5 text-stone-300 hover:text-white" />
