@@ -100,7 +100,7 @@ export default function SubscribeScreen() {
 
           {/* Premium Plan */}
           <View style={styles.premiumCard}>
-            <LinearGradient colors={['#78350f', '#1c1412']} style={StyleSheet.absoluteFill} borderRadius={20} />
+            <LinearGradient colors={['#78350f', '#1c1412']} style={[StyleSheet.absoluteFill, { borderRadius: 20 }]} />
             <View style={styles.popularBadge}>
               <Text style={styles.popularText}>Most Popular</Text>
             </View>
