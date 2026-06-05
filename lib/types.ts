@@ -5,20 +5,20 @@ export interface FossilInfo {
   period: string
   age: string
   description: string
+  fossilType: string
+  fossilTypeExplanation: string
   formationProcess: string
-  habitat: string
+  animalDescription: string
+  animalBehavior: string
+  animalSize: string
   diet: string
-  size: string
+  habitat: string
   geography: string
   rarity: 'Common' | 'Uncommon' | 'Rare' | 'Very Rare' | 'Exceptional'
   significance: string
   funFact: string
   imageUrl: string
+  animalImageUrl: string
   savedAt: number
   sharedBy?: string
-}
-
-export interface UserFindings {
-  fossils: FossilInfo[]
-  isPremium: boolean
 }
