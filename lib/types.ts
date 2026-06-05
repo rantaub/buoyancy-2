@@ -21,4 +21,5 @@ export interface FossilInfo {
   animalImageUrl: string
   savedAt: number
   sharedBy?: string
+  _demo?: boolean
 }

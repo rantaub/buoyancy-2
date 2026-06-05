@@ -103,6 +103,15 @@ export default function FossilDetailPage() {
       </div>
 
       <div className="max-w-3xl mx-auto px-4 -mt-16 relative">
+        {/* Demo mode notice */}
+        {fossil._demo && (
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
+            className="mb-4 px-4 py-3 bg-amber-900/20 border border-amber-700/30 rounded-xl flex items-start gap-3 text-amber-400/90 text-sm">
+            <span className="text-lg leading-none">🔬</span>
+            <span><strong>Demo result</strong> — this is sample data. To identify your own fossils with AI, add an <code className="text-amber-300 bg-amber-900/40 px-1 rounded">ANTHROPIC_API_KEY</code> to the server environment.</span>
+          </motion.div>
+        )}
+
         {/* Title Card */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="fossil-card rounded-2xl p-6 mb-4 amber-glow">
           <div className="flex items-start justify-between mb-3 flex-wrap gap-2">

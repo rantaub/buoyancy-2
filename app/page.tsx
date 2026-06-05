@@ -67,14 +67,20 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Hero with Prehistoric Animal */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/T_Rex_Drawing.jpg/1200px-T_Rex_Drawing.jpg"
-          alt="Prehistoric Tyrannosaurus Rex"
-          className="w-full h-full object-cover object-center scale-105"
-          style={{ filter: 'brightness(0.45) saturate(0.8)' }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-stone-950/40 via-transparent to-stone-950" />
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-950/60 via-transparent to-stone-950/60" />
+        {/* CSS prehistoric atmosphere — no external image needed */}
+        <div className="absolute inset-0" style={{
+          background: 'radial-gradient(ellipse 90% 70% at 65% 40%, rgba(120,53,15,0.55) 0%, rgba(28,20,18,0.85) 55%, #0c0a09 100%)',
+        }} />
+        <div className="absolute inset-0" style={{
+          background: 'radial-gradient(ellipse 50% 60% at 20% 70%, rgba(44,20,8,0.6) 0%, transparent 70%)',
+        }} />
+        {/* Dinosaur silhouette */}
+        <div className="absolute right-4 md:right-16 bottom-0 text-[18rem] md:text-[22rem] leading-none opacity-[0.07] pointer-events-none select-none"
+          style={{ filter: 'sepia(1) saturate(3) hue-rotate(10deg)' }}>
+          🦖
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-stone-950/30 via-transparent to-stone-950" />
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-950/50 via-transparent to-stone-950/30" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>

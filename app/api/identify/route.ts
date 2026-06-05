@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { identifyFossil, DEMO_FOSSIL } from '@/lib/claude'
+import { identifyFossil, getRandomDemoFossil } from '@/lib/claude'
 
 export async function POST(request: NextRequest) {
   try {
@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
     }
     if (!process.env.ANTHROPIC_API_KEY) {
       await new Promise(r => setTimeout(r, 2000))
-      return NextResponse.json(DEMO_FOSSIL)
+      return NextResponse.json({ ...getRandomDemoFossil(), _demo: true })
     }
     const fossilData = await identifyFossil(imageBase64, mimeType)
     return NextResponse.json(fossilData)
