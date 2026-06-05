@@ -88,7 +88,7 @@ export default function FindingsScreen() {
           contentContainerStyle={{ gap: 12, paddingBottom: 20 }}
           renderItem={({ item }) => (
             <TouchableOpacity style={styles.card} onPress={() => handleViewFossil(item)} activeOpacity={0.8}>
-              <Image source={{ uri: item.imageUri }} style={styles.cardImage} />
+              <Image source={{ uri: item.imageUrl }} style={styles.cardImage} />
               <LinearGradient colors={['transparent', 'rgba(0,0,0,0.8)']} style={styles.cardGrad} />
               <TouchableOpacity style={styles.deleteBtn} onPress={() => handleDelete(item.id, item.name)}>
                 <Ionicons name="trash-outline" size={14} color="#ef4444" />
