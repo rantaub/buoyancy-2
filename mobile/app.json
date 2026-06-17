@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "FossilLens",
+    "slug": "fossil-lens",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0c0a09"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.fossillens.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "FossilLens needs camera access to photograph fossils for identification.",
+        "NSPhotoLibraryUsageDescription": "FossilLens needs photo library access to select fossil images."
+      }
+    },
+    "android": {
+      "package": "com.fossillens.app",
+      "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE"]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-camera",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "FossilLens needs photo library access to select fossil images."
+        }
+      ]
+    ],
+    "scheme": "fossillens",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

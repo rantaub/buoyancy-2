@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 245, 230, 210;
+  --background-start-rgb: 12, 10, 9;
+  --background-end-rgb: 20, 15, 10;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+}
+
+.fossil-card {
+  background: linear-gradient(135deg, rgba(41, 37, 36, 0.8) 0%, rgba(28, 25, 23, 0.9) 100%);
+  border: 1px solid rgba(180, 120, 60, 0.2);
+}
+
+.glass-card {
+  backdrop-filter: blur(12px);
+  background: rgba(41, 37, 36, 0.6);
+  border: 1px solid rgba(180, 120, 60, 0.15);
+}
+
+.amber-glow {
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.1), 0 0 60px rgba(245, 158, 11, 0.05);
+}
+
+.rarity-common { color: #9ca3af; }
+.rarity-uncommon { color: #4ade80; }
+.rarity-rare { color: #60a5fa; }
+.rarity-very-rare { color: #c084fc; }
+.rarity-exceptional { color: #fb923c; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
